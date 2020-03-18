@@ -1,5 +1,5 @@
 # google-maps-webdriver
-google-maps-webdriver is a demo of [Webdriver Io](https://webdriver.io/) and users google maps as a demo page. 
+google-maps-webdriver is a demo of [Webdriver Io](https://webdriver.io/) and uses google maps as a demo site. 
 
 
 ## Architecture
