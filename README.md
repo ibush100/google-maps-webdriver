@@ -13,7 +13,7 @@ google-maps-webdriver is a demo of [Webdriver Io](https://webdriver.io/) and use
 ### Helpers 
 - The helpers package contains a helpers (common methods) used for the pages. 
 
-### Running 
+## Running 
 - Clone the repo. 
 - Run `npm install` inside where the package.json file is located to download the node modules needed. 
 - Run `npm run test` to run the tests package (or where specified in the wdio.config.js file).
