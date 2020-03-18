@@ -11,9 +11,11 @@ get reverseDestination() {return $('.widget-directions-reverse'); }
 get drivingDirection () {return $('//div[@aria-label=\'Driving\']'); }
 get leavingNowDropDown () {return $('.section-action-popup-container'); }
 get signInForMobileDirections() {return $('button*=Sign in'); }
+get flightOptions () {return $('//div[@aria-label=\'Flights\']'); }
+get flightsLink () {return $('.section-directions-trip-flights-summary'); }
 
 clickDirections() {
-    this.clickElement(this.directions);
+   this.clickElement(this.directions);
 }
 
 clickSendToMobile() {
@@ -52,6 +54,13 @@ routesArSortedByTime () {
     return timeAndDistance.every((a, b) =>{
         return a > b ? 1: b > a ? -1 :0; 
     });
+}
+
+flightOptionsArePresent () {
+    this.firstResult.waitForDisplayed(); 
+    this.clickElement(this.flightOptions);
+    this.flightsLink.waitForDisplayed();
+    return this.flightsLink.isDisplayed(); 
 }
 
 }

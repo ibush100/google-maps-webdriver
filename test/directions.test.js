@@ -3,9 +3,9 @@ const accountsPage = require('../pages/accounts.page');
 const assert = require('assert');
 global.URL = require('url').URL;
 
-describe('Directions Input', () => {
+describe('Directions', () => {
 
-it('Should display route options', () => {
+it('Should display driving route options', () => {
     browser.url('https://www.google.com/maps/preview');
     searchPage.clickDirections(); 
     searchPage.typeStartingLocation("Philadelphia, PA");
@@ -35,6 +35,16 @@ it('Should display route options', () => {
     searchPage.clickSendToMobile();
     let accountsPageLoaded = accountsPage.waitForAccoutnsToLoad();
     assert.equal(true, accountsPageLoaded, 'Accounts page did not load');
+  });
+
+  it('Should display flying options', () => {
+    browser.url('https://www.google.com/maps/preview');
+    searchPage.clickDirections(); 
+    searchPage.typeStartingLocation("Philadelphia, PA");
+    searchPage.typeEndingLocation("San Francisco, CA");
+    searchPage.clickToSearch(); 
+    let flightOptions = searchPage.flightOptionsArePresent();
+    assert.equal(true, flightOptions, 'Fligh options are not present');
   });
 
 });
