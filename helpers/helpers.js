@@ -5,16 +5,18 @@ constructor() {
 
 }   
 
-typeInput(element, text) {
-    clickElement(element);
-    element.keys(text);
-}
-
 clickElement(element) {
     element.waitForDisplayed();
     element.click();
 
 }
+
+typeInput(element, text) {
+    element.waitForDisplayed();
+    element.click();
+    element.keys(text);
+}
+
 
 }
 module.exports = Helpers;

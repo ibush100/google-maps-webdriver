@@ -36,7 +36,6 @@ it('Should display route options', () => {
     let accountsPageLoaded = accountsPage.waitForAccoutnsToLoad();
     console.log(accountsPageLoaded); 
     assert.equal(true, accountsPageLoaded, 'Accounts page did not load');
-    browser.debug();
   });
 
 });
