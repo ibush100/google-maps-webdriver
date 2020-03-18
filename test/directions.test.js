@@ -34,7 +34,6 @@ it('Should display route options', () => {
     searchPage.clickToSearch(); 
     searchPage.clickSendToMobile();
     let accountsPageLoaded = accountsPage.waitForAccoutnsToLoad();
-    console.log(accountsPageLoaded); 
     assert.equal(true, accountsPageLoaded, 'Accounts page did not load');
   });
 
